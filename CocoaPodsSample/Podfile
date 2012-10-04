@@ -1,0 +1,5 @@
+platform :ios
+pod 'SVProgressHUD'
+pod 'AFNetworking'
+pod 'Nimbus', '>=0.9.3'
+pod 'ViewDeck', '~>1.4.2'
