@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SVProgressHUD.h"
+
 
 @interface ViewController ()
 
@@ -17,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [SVProgressHUD dismissWithSuccess:@"Fuck"];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
