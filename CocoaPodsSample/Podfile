@@ -1,6 +1,6 @@
-platform :ios
+platform :ios, '5.1'
 pod 'SVProgressHUD'
 pod 'AFNetworking'
 pod 'Nimbus', '>=0.9.3'
 pod 'ViewDeck', '~>1.4.2'
-#pod 'XMPPFramework', :git => 'git://github.com/redbug/XMPPFramework.git'
+pod 'XMPPFramework', :git => 'git://github.com/redbug/XMPPFramework.git'

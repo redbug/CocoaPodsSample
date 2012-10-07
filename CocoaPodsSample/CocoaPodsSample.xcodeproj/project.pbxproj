@@ -19,6 +19,9 @@
 		505337DA161D9EB10071A4AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505337D9161D9EB10071A4AD /* ViewController.m */; };
 		505337DD161D9EB10071A4AD /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505337DB161D9EB10071A4AD /* ViewController_iPhone.xib */; };
 		505337E0161D9EB10071A4AD /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505337DE161D9EB10071A4AD /* ViewController_iPad.xib */; };
+		5069173F1621871A007F2638 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5069173E1621871A007F2638 /* libxml2.dylib */; };
+		506917461621875B007F2638 /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 506917451621875B007F2638 /* libresolv.dylib */; };
+		5069174816218795007F2638 /* libidn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5069174716218795007F2638 /* libidn.a */; };
 		98E5B7E172D145BF81B3B525 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C1DEDF836540C89E9C6C49 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		505337D9161D9EB10071A4AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		505337DC161D9EB10071A4AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		505337DF161D9EB10071A4AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		5069173E1621871A007F2638 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		506917451621875B007F2638 /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		5069174716218795007F2638 /* libidn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libidn.a; path = Pods/XMPPFramework/Vendor/libidn/libidn.a; sourceTree = "<group>"; };
 		DD1A1A68D81A46B5B27B936B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		E6C1DEDF836540C89E9C6C49 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,10 +55,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506917461621875B007F2638 /* libresolv.dylib in Frameworks */,
+				5069173F1621871A007F2638 /* libxml2.dylib in Frameworks */,
 				505337C1161D9EB10071A4AD /* UIKit.framework in Frameworks */,
 				505337C3161D9EB10071A4AD /* Foundation.framework in Frameworks */,
 				505337C5161D9EB10071A4AD /* CoreGraphics.framework in Frameworks */,
 				98E5B7E172D145BF81B3B525 /* libPods.a in Frameworks */,
+				5069174816218795007F2638 /* libidn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,9 @@
 		505337B1161D9EB10071A4AD = {
 			isa = PBXGroup;
 			children = (
+				5069174716218795007F2638 /* libidn.a */,
+				506917451621875B007F2638 /* libresolv.dylib */,
+				5069173E1621871A007F2638 /* libxml2.dylib */,
 				505337C6161D9EB10071A4AD /* CocoaPodsSample */,
 				505337BF161D9EB10071A4AD /* Frameworks */,
 				505337BD161D9EB10071A4AD /* Products */,
@@ -296,6 +308,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaPodsSample/CocoaPodsSample-Prefix.pch";
 				INFOPLIST_FILE = "CocoaPodsSample/CocoaPodsSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Pods/XMPPFramework/Vendor/libidn\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -309,6 +325,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaPodsSample/CocoaPodsSample-Prefix.pch";
 				INFOPLIST_FILE = "CocoaPodsSample/CocoaPodsSample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Pods/XMPPFramework/Vendor/libidn\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
